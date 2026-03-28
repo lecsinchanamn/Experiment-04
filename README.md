@@ -598,3 +598,59 @@ https://github.com/lecsinchanamn/Experiment-04/blob/464ff2620e1dc8a02c20465a4ce2
 | Expected Linear Gain     | ≈ 10–30 V/V                | Should be > 1                           |
 | Final Conclusion         | Amplifier gain is positive | Circuit should amplify, not attenuate   |
 
+# Justification
+
+1. **Power & Bias:**  
+   - Power ≤ 1.8 mW, VDD = 0.9 V, VSS = -0.9 V  
+   - Tail current ≈ 1 mA, splits equally (0.5 mA each)  
+   - Tail node V_S ≈ -0.7 V keeps all MOSFETs in saturation
+
+2. **Gain:**  
+   - Theoretical: 29.4 V/V (29.36 dB)  
+   - Simulated: 38.5 V/V (31.7 dB)
+
+3. **Reason for Gain Difference:**  
+   - Non-ideal PMOS load (current mirror effect)  
+   - Channel length modulation & mobility degradation  
+   - NMOS current source (M5) not ideal
+
+4. **Frequency Response:**  
+   - Flat gain in midband  
+   - Roll-off at high frequencies due to capacitances
+
+5. **Linearity:**  
+   - Linear for small differential inputs  
+   - Large inputs cause distortion and non-linear behavior
+  
+#  Conclusionr
+1. All three differential amplifier configurations operate correctly with transistors in saturation.  
+2. Circuit 3 (PMOS active load) achieves the highest gain, while Circuit 2 (NMOS current source) has the lowest due to degeneration.  
+3. Frequency response is influenced by load and parasitic capacitances, with Circuit 3 showing the best gain-bandwidth trade-off.  
+4. Differences between theoretical and simulated results arise from non-idealities like finite output resistance, channel length modulation, and current mirror effects.
+
+# Final key deffernce btween three circuit
+
+| Parameter              | Circuit 1                     | Circuit 2                        | Circuit 3                |
+|------------------------|-------------------------------|---------------------------------|--------------------------|
+| Load Type              | Resistive Load (RD)           | Resistive Load                   | PMOS Active Load         |
+| Tail Element           | Ideal Current Source          | NMOS Current Source (M5)         | NMOS Current Source (M5) |
+| Supply Voltage         | ±0.9 V                        | ±0.9 V                           | ±0.9 V                   |
+| Tail Current (ISS)     | 1 mA                          | 1 mA                             | 1 mA                     |
+| Branch Current         | 0.5 mA                        | 0.5 mA                           | 0.5 mA                   |
+| Theoretical Gain (V/V) | 4.5                           | 5.3                              | 29.4                     |
+| Simulated Gain (V/V)   | 6.0                           | 1.8                              | 38.5                     |
+| Gain (dB)              | 15.6 dB                       | 5.1 dB                           | 31.7 dB                  |
+| Output Resistance      | Moderate                      | Low                               | High                     |
+| Linearity              | Good                          | Poor                              | Good                     |
+| Degeneration Effect    | Low                           | High                              | Moderate                 |
+| Frequency Response     | Moderate                      | Reduced                           | Best                     |
+| Non-idealities Impact  | Low                           | High                               | Moderate                 |
+
+# Conclusion for Differential Amplifier Circuits for all three.
+
+1. **Circuit 1 (Resistive Load):** Provides moderate gain with good linearity and low degeneration, offering stable performance but limited amplification.
+2. **Circuit 2 (NMOS Current Source):** Exhibits the lowest gain due to high degeneration and low output resistance, resulting in poor linearity.
+3. **Circuit 3 (PMOS Active Load):** Achieves the highest gain and maintains good linearity, thanks to high output resistance and the PMOS current mirror effect.
+4. **Frequency Response:** Best in Circuit 3, moderate in Circuit 1, and limited in Circuit 2 due to degeneration and low output resistance.
+5. **Non-Ideal Effects:** Channel length modulation and parasitic capacitances impact Circuit 2 the most, while Circuit 3 is the most robust to practical MOSFET effects.
+
