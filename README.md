@@ -89,4 +89,4 @@ DIFFERENTIAL AMPLIFIER DESIGN PARAMETERS (Simple Table)
 | **Technology**                 | TSMC 180 nm                        |
 
 # Circuit diogram
-Ckt 01 ckt diogram.png
+https://github.com/lecsinchanamn/Experiment-04/blob/46c4f172a8a7dadc5ce9e2321c71c1a5fb978056/Ckt%2001%20ckt%20diogram.png
