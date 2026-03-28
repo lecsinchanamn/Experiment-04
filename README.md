@@ -411,6 +411,28 @@ https://github.com/lecsinchanamn/Experiment-04/blob/8c968d8143ae255ddad0c57165b8
 | Output Resistance (Rout)   | —                              | 10 kΩ                          |
 | Amplifier Behavior         | Amplified & Inverted           | Linear (ideal, saturation)     |
 
+# Factors Affecting Theoretical vs Simulated Gain
+
+1. Temperature Effects:
+   - Simulation includes temperature variations.
+   - MOSFET parameters like VT and mobility slightly change, affecting gain.
+
+2. Supply Voltage Fluctuations:
+   - VDD and VSS are not perfectly constant in simulation.
+   - Small voltage drops reduce effective output swing and gain.
+
+3. Mismatch Between Transistors:
+   - Device mismatches in width, threshold, or current.
+   - Leads to unequal current splitting, affecting differential gain.
+
+4. Nonlinearities in MOSFETs:
+   - For larger input signals, transistors enter non-linear regions.
+   - Causes gain compression compared to ideal theoretical gain.
+
+5. Load Capacitance Effects:
+   - The external CL affects frequency response.
+   - Reduces gain at higher frequencies due to RC roll-off.
+
 # AC Analysis 
 AC analysis of a differential amplifier studies its response to small, time-varying input signals.
 The NMOS current source provides a stable tail current, steering it between the differential pair.
