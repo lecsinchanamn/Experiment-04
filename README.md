@@ -340,9 +340,9 @@ https://github.com/lecsinchanamn/Experiment-04/blob/367df556852a9f3583d20d1573f7
   - Mirrors current and gives high output resistance
 
 # DC Analysis 
+https://github.com/lecsinchanamn/Experiment-04/blob/42d2b3b9042f5b7d74661072340a34210ec45856/ckt%2002%20ckt%20diogram.png
 
 # Input Common-Mode Range (ICMR)
-
 | Parameter                        | Value          | Notes / Condition                                      |
 |----------------------------------|----------------|--------------------------------------------------------|
 | Minimum Input Common-Mode Voltage | -0.34 V        | NMOS transistors M1, M2 ON; tail current source M5 in saturation |
@@ -350,9 +350,18 @@ https://github.com/lecsinchanamn/Experiment-04/blob/367df556852a9f3583d20d1573f7
 | Input Common-Mode Range (ICMR)    | -0.34 V to 0.39 V | Range where all transistors operate in saturation    |
 
 # Output Common-Mode Range (OCMR)
-
 | Parameter                         | Value       | Notes / Condition                                      |
 |----------------------------------|------------|--------------------------------------------------------|
 | Minimum Output Common-Mode Voltage | -0.36 V    | NMOS transistors M1, M2 remain in saturation         |
 | Maximum Output Common-Mode Voltage | 0.65 V     | PMOS load transistors M3, M4 remain in saturation    |
 | Output Common-Mode Range (OCMR)    | -0.36 V to 0.65 V | Range where all transistors operate in saturation |
+
+# Differential Input Voltage Range 
+
+| Parameter                        | Value        | Notes / Condition                                  |
+|---------------------------------|-------------|---------------------------------------------------|
+| Maximum Differential Input Voltage | 0.5 V       | At the boundary where one transistor starts to turn OFF |
+| Minimum Differential Input Voltage | -0.5 V      | Symmetrical for linear operation                  |
+| Linear Differential Input Range    | -0.5 V to 0.5 V | Both NMOS transistors (M1, M2) remain in saturation |
+
+# Transient Analysis and cheaking linear or non-linear
