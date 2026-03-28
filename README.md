@@ -460,3 +460,31 @@ https://github.com/lecsinchanamn/Experiment-04/blob/40eaaa172de73b30c5c506e3bd0d
 3. Frequency response shows a stable midband region with a high-frequency roll-off due to parasitic and load capacitances.  
 4. Small differential inputs produce clean, linear output without distortion, ensuring proper signal amplification.  
 5. Large differential inputs push the amplifier into non-linear operation, causing one branch to dominate and resulting in waveform distortion.  
+
+# CIRCUIT 03
+# Design and analysis CMOS Differential Amplifier (DC Analysis & verify the Saturation Conditions for all MOSFETs)
+# Circuit diogram 
+
+The CMOS differential amplifier is designed using a pair f NMOS transistors (M1 and M2) forming the differential input stage, a PMOS active load (M3 and M4) for high output resistance, and an NMOS current source (M5) providing the tail current. The key design objective is to ensure all transistors operate in the saturation region while satisfying the given supply and power constraints.
+1. DC Operating Point:
+   - The tail current (ISS) is set to a value that satisfies the power budget (e.g., 1 mA for a 1.8 mW limit).
+   - Under balanced input conditions, this current splits equally between M1 and M2.
+   - The gate-source voltages of the NMOS input transistors are chosen to keep them ON and in saturation.
+2. Saturation Verification:
+   - NMOS Input Transistors (M1, M2):
+     Condition: VDS ≥ VOV
+     - Ensures proper linear amplification.
+   - NMOS Current Source (M5):
+     Condition: VDS ≥ VOV
+     - Maintains constant tail current, avoiding gain variation.
+3. DC Bias Adjustment:
+   - Tail node voltage is tuned via transistor width adjustment to ensure M5 operates at the edge of saturation.
+   - Gate voltages of PMOS transistors are set to establish the desired output common-mode voltage.
+4. Impact of Non-Idealities:
+   - Finite output resistance of M5 and PMOS load slightly reduces the gain.
+   - Channel length modulation and mobility degradation introduce deviations from theoretical values.
+   - Matching of device sizes ensures balanced current splitting and minimizes offset.
+5. Verification Procedure:
+   - Calculate drain, gate, and source voltages for all transistors.
+   - Check the VDS (NMOS) and VSD (PMOS) against VOV to confirm saturation.
+  
