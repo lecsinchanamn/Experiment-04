@@ -535,7 +535,7 @@ Transient analysis is used to study how the amplifier responds to time-varying s
 
   1. Linear region
 
-  | Parameter        | Value      |
+| Parameter        | Value      |
 |------------------|------------|
 | Technology       | 180 nm     |
 | VDD              | +0.9 V     |
