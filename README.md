@@ -532,23 +532,53 @@ Transient analysis is used to study how the amplifier responds to time-varying s
 - To confirm that all transistors remain in saturation during signal swings.
 - To check the tail current sharing between the NMOS input pair (M1 & M2).
 - To evaluate timing-related behavior like rise time, fall time, and delay in the output.
-  
+
+  1. Linear region
+
+  | Parameter        | Value      |
+|------------------|------------|
+| Technology       | 180 nm     |
+| VDD              | +0.9 V     |
+| VSS              | -0.9 V     |
+| Power            | ≤ 1.8 mW   |
+| Channel Length   | 480 nm     |
+| Vin,CM           | 0 V        |
+| Vo,CM            | 0 V        |
+| Vp               | -0.7 V     |
+| CL               | 10 pF      |
+| VT               | 0.36 V     |
+
+2. NON linear region
+| Parameter          | Value / Observation                                      |
+|-------------------|----------------------------------------------------------|
+| Differential Input | Vid = 600 mV > 0.48 V                                    |
+| Circuit            | Circuit 3                                                |
+| Output Waveform    | Distorted with clipping                                   |
+| NMOS Behavior      | One transistor (M1 or M2) enters cutoff                  |
+| Current Flow       | Steered completely to one branch                          |
+| PMOS Load          | Operates normally                                        |
+| Amplifier Behavior | Non-linear amplification                                 |
+
 https://github.com/lecsinchanamn/Experiment-04/blob/dc04c95ee7d1f9cbcd6e4d376b2428bb9c07190d/ckt%2003%20TA.PNG
 
-# Simulation and wavefrom and output volage observastion
+# Conclusion
+| Condition                | Behavior                                               |
+|--------------------------|--------------------------------------------------------|
+| |Vid| < 2VOV              | Linear operation; output waveform is undistorted      |
+| |Vid| > 2VOV              | Non-linear behavior; current steering and transistor cutoff occur |
 
-| Parameter            | Value / Signal           | Observation                              |
-|---------------------|--------------------------|------------------------------------------|
-| Analysis Type       | .tran 5 ms               | Transient simulation                     |
-| Input Signal (Vin1) | SINE(0, 10 mV, 1 kHz)   | Sinusoidal, +10 mV peak                  |
-| Input Signal (Vin2) | SINE(0, -10 mV, 1 kHz)  | Sinusoidal, -10 mV peak                  |
-| Differential Input  | 20 mV (peak-to-peak)    | Small signal input                       |
-| Input Waveform      | ±10 mV, 1 kHz           | Centered around 0 V                      |
-| Output (Vout1)      | ≈ 0.8876 V              | DC operating point                       |
-| Output Waveform     | Sinusoidal              | Follows input shape                      |
-| Output Variation    | Small signal            | Slight variation around DC level         |
-| Gain Observation    | Low amplitude output    | Due to biasing conditions                |
+# Theoretical Gain and simulation gain calucation
 
+| Parameter                  | Value / Observation                           |
+|----------------------------|-----------------------------------------------|
+| Input Signal               | Sine wave, 1 kHz, 10 mV peak-to-peak         |
+| Output Signal (Simulated)  | 385 mV peak-to-peak, inverted                 |
+| Simulated Gain (Av)        | 38.5 V/V                                      |
+| Simulated Gain (dB)        | 31.7 dB                                       |
+| Theoretical Gain (Av)      | 29.4 V/V                                      |
+| Theoretical Gain (dB)      | 29.36 dB                                      |
+| Reasons for Deviation      | Channel length modulation, PMOS load, non-ideal tail current, mobility loss, parasitics, DC offset |
+| Conclusion                 | Simulation gain differs from theory due to real MOSFET effects and non-idealities |
 # AC Analysis
 
 https://github.com/lecsinchanamn/Experiment-04/blob/464ff2620e1dc8a02c20465a4ce2f4e9a410a8ec/ckt%2003%20AC%20analysis.PNG
@@ -567,3 +597,4 @@ https://github.com/lecsinchanamn/Experiment-04/blob/464ff2620e1dc8a02c20465a4ce2
 | Expected Practical Gain  | ≈ 20–30 dB                 | Considering non-ideal effects           |
 | Expected Linear Gain     | ≈ 10–30 V/V                | Should be > 1                           |
 | Final Conclusion         | Amplifier gain is positive | Circuit should amplify, not attenuate   |
+
