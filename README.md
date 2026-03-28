@@ -465,6 +465,7 @@ https://github.com/lecsinchanamn/Experiment-04/blob/40eaaa172de73b30c5c506e3bd0d
 # Design and analysis CMOS Differential Amplifier (DC Analysis & verify the Saturation Conditions for all MOSFETs)
 # Circuit diogram 
 
+
 The CMOS differential amplifier is designed using a pair f NMOS transistors (M1 and M2) forming the differential input stage, a PMOS active load (M3 and M4) for high output resistance, and an NMOS current source (M5) providing the tail current. The key design objective is to ensure all transistors operate in the saturation region while satisfying the given supply and power constraints.
 1. DC Operating Point:
    - The tail current (ISS) is set to a value that satisfies the power budget (e.g., 1 mA for a 1.8 mW limit).
