@@ -549,3 +549,21 @@ https://github.com/lecsinchanamn/Experiment-04/blob/dc04c95ee7d1f9cbcd6e4d376b24
 | Output Variation    | Small signal            | Slight variation around DC level         |
 | Gain Observation    | Low amplitude output    | Due to biasing conditions                |
 
+# AC Analysis
+
+https://github.com/lecsinchanamn/Experiment-04/blob/464ff2620e1dc8a02c20465a4ce2f4e9a410a8ec/ckt%2003%20AC%20analysis.PNG
+
+# ransconductance (gm)/ Overdrive Voltage/ Output Resistance/ Gain Calculations/ Theoretical and Practical Results
+
+| Step                     | Final Correct Value        | Formula / Note                          |
+|--------------------------|----------------------------|-----------------------------------------|
+| Overdrive Voltage (Vov)  | 0.354 V                    | Vov = VGS − Vt = 0.72 − 0.366           |
+| Drain Current (Id)       | 0.524 mA                   | From DC analysis                        |
+| Transconductance (gm)    | 2.96 mS                    | gm = 2Id / Vov                          |
+| Output Resistance (ro)   | 19.08 kΩ                   | ro = 1 / (λId), λ = 0.1 V⁻¹             |
+| Effective Rout           | 9.5 kΩ                     | Rout = ro || ro ≈ ro/2                  |
+| Theoretical Gain (Ad)    | 28.1 V/V                   | Ad = gm × Rout                          |
+| Gain in dB (Theory)      | 28.97 dB                   | 20 log(28.1)                            |
+| Expected Practical Gain  | ≈ 20–30 dB                 | Considering non-ideal effects           |
+| Expected Linear Gain     | ≈ 10–30 V/V                | Should be > 1                           |
+| Final Conclusion         | Amplifier gain is positive | Circuit should amplify, not attenuate   |
