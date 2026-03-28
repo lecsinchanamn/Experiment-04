@@ -282,7 +282,7 @@ The design meets specifications and provides proper amplification and frequency 
 
 # CIRCUIT 02
 # Design and analysis the differential amplifer with PMOS active load and an NMOS current source
-
+# what is the  differential amplifer with PMOS active load and an NMOS current source
 - The circuit has two matched NMOS transistors (M1, M2) as a differential pair, with their sources connected to a current source NMOS (M5) and drains connected to a PMOS current mirror load (M3, M4).  
 - A differential input, vid = vin1 − vin2, steers the tail current ISS between M1 and M2:  
   - If vin1 > vin2 → M1 conducts more, M2 less.  
@@ -292,9 +292,50 @@ The design meets specifications and provides proper amplification and frequency 
 - M5 provides a nearly constant tail current, but its finite resistance slightly reduces gain.  
 - Small inputs → all transistors in saturation → linear amplification.  
 - Large inputs → one transistor may turn OFF → non-linear behavior.  
-- Using a PMOS active load increases gain compared to a resistive-load amplifier.  
+- Using a PMOS active load increases gain compared to a resistive-load amplifier.
+
+# Parameter given.
+ | Parameter                     | Value                |
+|--------------------------------|--------------------|
+| Technology                     | TSMC 180 nm        |
+| Supply Voltage (VDD)           | +0.9 V             |
+| Negative Supply (VSS)          | −0.9 V             |
+| Power Constraint (P)           | ≤ 1.8 mW           |
+| Channel Length (Ln)            | 480 nm             |
+| Input Common-Mode Voltage      | 0 V                |
+| Output Common-Mode Voltage     | 0 V                |
+| Tail Node Voltage (Vp)         | −0.7 V             |
+| Load Capacitance (CL)          | 10 pF              |
+| Threshold Voltage (VT)         | ≈ 0.36 V           |
+
 # circuit diogram
+https://github.com/lecsinchanamn/Experiment-04/blob/367df556852a9f3583d20d1573f739e4d5d294bd/ckt%2002%20ckt%20diogram.png
 
+# Differential Amplifier Transistor Bias and Width Summary
 
+| Transistor | Type | Key Voltages / Conditions                         | Saturation Check                | Initial Width (μm) | Tuned Width (μm) |
+|------------|------|--------------------------------------------------|--------------------------------|------------------|----------------|
+| M1, M2     | NMOS | VS = −0.7 V, VD = 0 V, VOV = 0.34 V            | VDS ≥ VOV → 0.7 ≥ 0.34 V       | 17.56            | 29.852         |
+| M5         | NMOS | VS = −0.9 V, VD = −0.7 V, VOV = 0.2 V          | VDS ≥ VOV → 0.2 ≥ 0.2 V        | 101.5            | 195.85         |
+| M3, M4     | PMOS | VS = 0.9 V, VD = 0 V, VOV sufficient           | VSD > VOV → 0.9 > VOV          | —                | —              |
 
+# Differential Amplifier Explanation (Simple)
+
+1 **M1 & M2 (NMOS Pair)**
+  - Source: Tail node VS ≈ −0.7 V
+  - Drain: Connected to PMOS load
+  - VOV = 0.34 V → Saturation OK (VDS ≥ VOV)
+  - Width tuned: 17.56 μm → 29.85 μm for correct current
+
+2 **M5 (NMOS Current Source)**
+  - Source: VSS = −0.9 V
+  - Drain: Tail node VD = −0.7 V
+  - VOV ≈ 0.2 V → Saturation OK
+  - Width tuned: 101.5 μm → 195.85 μm to provide 1 mA current
+
+3 **M3 & M4 (PMOS Load / Current Mirror)**
+  - Source: VDD = 0.9 V
+  - Drain: Output VD = 0 V
+  - VSD > VOV → Saturation OK
+  - Mirrors current and gives high output resistance
 
