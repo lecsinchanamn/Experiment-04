@@ -214,7 +214,7 @@ NON-LINEAR REGION OF DIFFERENTIAL AMPLIFIER
 
 https://github.com/lecsinchanamn/Experiment-04/blob/579019e810619c3748a6b5e3a4e98d2b25fa91a4/ckt%2001%20SandT.png
 
-| Practical / Simulation (Left)          | Theoretical (Right)                                               |
+| Practical / Simulation                  | Theoretical                                               |
 |---------------------------------------|------------------------------------------------------------------|
 | **Input Signal**                        | **Channel Length Modulation**                                     |
 | Type: Sine, f = 1 kHz,                  | λ = 0.1 V⁻¹                                                      |
@@ -234,3 +234,11 @@ https://github.com/lecsinchanamn/Experiment-04/blob/579019e810619c3748a6b5e3a4e9
 | **Observation**                         | **Observation**                                                   |
 | Output shows practical effects,          | Theoretical gain lower due to ideal assumptions (no parasitics,  |
 | parasitic capacitance, etc.             | perfect current matching).                                        |
+
+# Reason why there is diffrence between  Simulation and Theoretical      
+
+1. Channel Length Effect: Real MOSFETs’ channel length changes slightly reduce gain.
+2. Output Resistance: Limited transistor resistance lowers the effective load and gain.
+3. Mobility Drop: Electron movement slows at high fields, reducing amplifier gain.
+4. Overdrive Shift: Small changes in V_OV change currents and affect gain.
+5. Parasitics & Measurement: Internal capacitances and measurement errors slightly alter gain.
