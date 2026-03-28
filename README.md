@@ -183,6 +183,8 @@ VDSsat_load = Minimum VDS for load transistor to stay in saturation
 
 #  Transient Analysis and Linearity cheaking
 # Linear region
+https://github.com/lecsinchanamn/Experiment-04/blob/8981e3f660f29664d967ed91ad2d0fec3420cf93/ckt%2001%20TA%20liner.png
+
 LINEARITY VERIFICATION OF DIFFERENTIAL AMPLIFIER
 | Parameter / Case          | Value / Observation                           | Explanation / Justification                       |
 |---------------------------|-----------------------------------------------|---------------------------------------------------|
@@ -193,3 +195,15 @@ LINEARITY VERIFICATION OF DIFFERENTIAL AMPLIFIER
 | Transistor Operation      | Both NMOS transistors in saturation           | Required for linear behavior                      |
 | Amplifier Behavior        | Linear amplification                           | Output proportional to input difference          |
 
+# Non Linear region
+
+NON-LINEAR REGION OF DIFFERENTIAL AMPLIFIER
+
+| Parameter / Case          | Value / Observation                        | Explanation / Justification                          |
+|---------------------------|--------------------------------------------|------------------------------------------------------|
+| Condition for Non-Linearity | |Vid| > 2 × VOV                             | Differential input exceeds linear range             |
+| Calculated Linear Limit    | 2 × 0.34 = 0.68 V                           | Maximum input for linear operation                  |
+| Test Input (Case 2)       | Vid = 0.6 V > 0.68 V                         | Input exceeds linear range                           |
+| Output Observation        | Distorted waveform, clipping observed       | Amplifier no longer behaves linearly               |
+| Transistor Operation      | One transistor enters cutoff                 | Only one transistor carries the current             |
+| Amplifier Behavior        | Non-linear amplification                     | Output not proportional to input difference         |
