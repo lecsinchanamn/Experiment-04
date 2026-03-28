@@ -563,13 +563,6 @@ Transient analysis is used to study how the amplifier responds to time-varying s
 
 https://github.com/lecsinchanamn/Experiment-04/blob/dc04c95ee7d1f9cbcd6e4d376b2428bb9c07190d/ckt%2003%20TA.PNG
 
-# Conclusion
-
-| Condition                | Behavior                                               |
-|--------------------------|--------------------------------------------------------|
-| |Vid| < 2VOV              | Linear operation; output waveform is undistorted      |
-| |Vid| > 2VOV              | Non-linear behavior; current steering and transistor cutoff occur |
-
 # Theoretical Gain and simulation gain calucation
 
 | Parameter                  | Value / Observation                           |
