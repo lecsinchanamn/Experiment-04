@@ -159,3 +159,11 @@ VDSsat_load = Minimum VDS for load transistor to stay in saturation
 |-------------------------------|--------------------------------|-----------------------------------------------------------|
 | Input Common-Mode Range (ICMR) | −0.34 V ≤ VICM ≤ 0.36 V       | Safe range for input to keep NMOS transistors in saturation |
 | Output Common-Mode Range (Vout,CM) | Determined by NMOS saturation and proper operation | Ensures output voltage stays within limits for linear amplification |
+
+# Maximum and Minimum output voltage with the final output common mode range
+
+| Parameter                       | Value / Formula                     | Explanation / Justification                                   |
+|---------------------------------|-------------------------------------|---------------------------------------------------------------|
+| Maximum Output Voltage (VOCM max) | VOCM(max) = VDD = 0.9 V            | Limited by supply voltage and ensures current flows through load |
+| Minimum Output Voltage (VOCM min) | VOCM(min) = VS + VOV = −0.7 + 0.34 = −0.36 V | Keeps NMOS transistors in saturation for proper operation      |
+| Final Output Common-Mode Range   | −0.36 V ≤ VOCM ≤ 0.9 V             | Safe output voltage range for linear differential amplification |
