@@ -465,6 +465,7 @@ https://github.com/lecsinchanamn/Experiment-04/blob/40eaaa172de73b30c5c506e3bd0d
 # Design and analysis CMOS Differential Amplifier (DC Analysis & verify the Saturation Conditions for all MOSFETs)
 # Circuit diogram 
 
+https://github.com/lecsinchanamn/Experiment-04/blob/37b09390f01edf2c37d182f82b4983893630e7af/ckt%2003%20ckt%20diogram.PNG
 
 The CMOS differential amplifier is designed using a pair f NMOS transistors (M1 and M2) forming the differential input stage, a PMOS active load (M3 and M4) for high output resistance, and an NMOS current source (M5) providing the tail current. The key design objective is to ensure all transistors operate in the saturation region while satisfying the given supply and power constraints.
 1. DC Operating Point:
@@ -488,4 +489,15 @@ The CMOS differential amplifier is designed using a pair f NMOS transistors (M1 
 5. Verification Procedure:
    - Calculate drain, gate, and source voltages for all transistors.
    - Check the VDS (NMOS) and VSD (PMOS) against VOV to confirm saturation.
+  #  Given parameter
   
+  | Transistor | Type |  Vg   |  Vs   |  Vd   | Vgs / Vsg | Vds / Vsd | Saturation Condition | Status             |
+|------------|------|-------|-------|-------|-----------|-----------|--------------------|------------------|
+| M1         | NMOS | 0     | -0.7  | 0.3   | 0.7       | 1.0       | VDS ≥ VGS − Vt     | Saturation        |
+| M2         | NMOS | 0     | -0.7  | 0.3   | 0.7       | 1.0       | VDS ≥ VGS − Vt     | Saturation        |
+| M3         | PMOS | 0.3   | 0.9   | 0.3   | 0.6       | 0.6       | VSD ≥ VSG − |Vt|  | Saturation        |
+| M4         | PMOS | 0.3   | 0.9   | 0.3   | 0.6       | 0.6       | VSD ≥ VSG − |Vt|  | Saturation        |
+| M5         | NMOS | 0.366 | -0.35 | -0.7  | 0.716     | 0.35      | |VDS| ≥ VGS − Vt   | Edge of Saturation|
+
+# DC Analysis 
+
