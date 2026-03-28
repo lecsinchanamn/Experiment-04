@@ -180,3 +180,16 @@ VDSsat_load = Minimum VDS for load transistor to stay in saturation
 | Maximum Output Voltage (VOCM max) | VOCM(max) = VDD = 0.9 V            | Limited by supply voltage and ensures current flows through load |
 | Minimum Output Voltage (VOCM min) | VOCM(min) = VS + VOV = −0.7 + 0.34 = −0.36 V | Keeps NMOS transistors in saturation for proper operation      |
 | Final Output Common-Mode Range   | −0.36 V ≤ VOCM ≤ 0.9 V             | Safe output voltage range for linear differential amplification |
+
+#  Transient Analysis and Linearity cheaking
+# Linear region
+LINEARITY VERIFICATION OF DIFFERENTIAL AMPLIFIER
+| Parameter / Case          | Value / Observation                           | Explanation / Justification                       |
+|---------------------------|-----------------------------------------------|---------------------------------------------------|
+| Condition for Linearity   | |Vid| < 2 × VOV                                | Ensures both transistors stay in saturation      |
+| Calculated Linear Limit   | 2 × 0.34 = 0.68 V                              | Maximum differential input for linear operation  |
+| Test Input (Case 1)       | Vid = 0.1 V < 0.68 V                           | Input is within linear range                     |
+| Output Observation        | Sinusoidal waveform, no distortion            | Confirms linear operation of amplifier           |
+| Transistor Operation      | Both NMOS transistors in saturation           | Required for linear behavior                      |
+| Amplifier Behavior        | Linear amplification                           | Output proportional to input difference          |
+
