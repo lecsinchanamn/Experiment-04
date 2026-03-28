@@ -131,3 +131,25 @@ VS = Source voltage of the differential pair
 VOV = Overdrive voltage (VGS − VT)
 VDSsat_load = Minimum VDS for load transistor to stay in saturation
 
+# Maximum Input Common Mode Voltage
+| Parameter                        | Value / Formula                       | Justification / Explanation                                        |
+|----------------------------------|--------------------------------------|--------------------------------------------------------------------|
+| **Drain-Source Condition**        | VDS ≥ VOV                             | Ensures NMOS transistors remain in saturation.                     |
+| **Drain Voltage (VD)**            | VD = 0 V                              | From previous bias calculation.                                     |
+| **Source Voltage (VS)**           | VS = −0.7 V                           | Tail node voltage sets source reference.                            |
+| **Drain-Source Voltage (VDS)**    | VDS = VD − VS = 0 − (−0.7) = 0.7 V   | Confirms transistor is in saturation (VDS > VOV).                  |
+| **Maximum Input Common-Mode (VICM max)** | VICM(max) = VD + VT = 0 + 0.36 = 0.36 V | Maximum input voltage while keeping NMOS in saturation.            |
+| **Minimum Input Common-Mode (VICM min)** | VICM(min) ≈ −VOV = −0.34 V           | Minimum voltage to keep differential pair in saturation.           |
+| **Final Input Common-Mode Range** | −0.34 V ≤ VICM ≤ 0.36 V               | Safe input voltage range for linear differential amplification.    |
+
+# Minimum Input Common Mode Voltage
+
+| Parameter                  | Value / Formula         | Explanation /justification                                 |
+|-----------------------------|-----------------------|---------------------------------------------|
+| Drain-Source Condition      | VDS ≥ VOV             | Keeps NMOS in saturation                     |
+| Drain Voltage (VD)          | 0 V                   | From bias calculation                        |
+| Source Voltage (VS)         | −0.7 V                | Tail node voltage                             |
+| Drain-Source Voltage (VDS)  | 0 − (−0.7) = 0.7 V    | Confirms saturation (VDS > VOV)             |
+| Maximum Input (VICM max)   | VD + VT = 0 + 0.36 = 0.36 V | Max input keeping NMOS in saturation         |
+| Minimum Input (VICM min)   | ≈ −VOV = −0.34 V      | Min input keeping differential pair on      |
+| Input Common-Mode Range     | −0.34 V ≤ VICM ≤ 0.36 V | Safe input range for linear operation       |
