@@ -365,3 +365,20 @@ https://github.com/lecsinchanamn/Experiment-04/blob/42d2b3b9042f5b7d74661072340a
 | Linear Differential Input Range    | -0.5 V to 0.5 V | Both NMOS transistors (M1, M2) remain in saturation |
 
 # Transient Analysis and cheaking linear or non-linear
+
+1. Linearity
+   
+| Parameter                  | Value / Condition          | Observation / Notes                                         |
+|-----------------------------|---------------------------|-------------------------------------------------------------|
+| Differential Input (Vid)    | 100 mV < 0.34 V           | Within linear range                                        |
+| Output Waveform             | Sinusoidal                | No distortion                                              |
+| NMOS Transistors (M1, M2)   | Saturation                | Operating normally                                         |
+| PMOS Load (M3, M4)          | Saturation                | Ensures proper load                                        |
+| Amplifier Behavior           | Linear                    | Output proportional to input difference                   |
+
+2. Non-Linearity
+   
+| Condition                  | Differential Input (Vid) | Circuit Behavior                         |
+|-----------------------------|-------------------------|-----------------------------------------|
+| Within Linear Range         | 100 mV < 0.34 V         | Output sinusoidal, M1 & M2 in saturation, linear amplification |
+| Beyond Linear Range         | 600 mV > 0.34 V         | Output distorted/clipped, one NMOS off, current steered, non-linear amplification |
