@@ -212,6 +212,8 @@ NON-LINEAR REGION OF DIFFERENTIAL AMPLIFIER
 
 #  SIMULATION VS THEORETICAL values of the  DIFFERENTIAL AMPLIFIER GAIN:
 
+https://github.com/lecsinchanamn/Experiment-04/blob/579019e810619c3748a6b5e3a4e98d2b25fa91a4/ckt%2001%20SandT.png
+
 | Practical / Simulation (Left)          | Theoretical (Right)                                               |
 |---------------------------------------|------------------------------------------------------------------|
 | **Input Signal**                        | **Channel Length Modulation**                                     |
