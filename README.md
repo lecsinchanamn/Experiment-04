@@ -112,3 +112,22 @@ https://github.com/lecsinchanamn/Experiment-04/blob/46c4f172a8a7dadc5ce9e2321c71
 | **Width Calculation (Theoretical)** | W = 2 × ID × L / (μnCox × VOV²) ≈ 17.57 μm               | First-order calculation using ideal MOSFET equations.                     |
 | **Width Calculation (Simulation)**  | W ≈ 28.475 μm                                             | Fine-tuned in simulation to account for non-ideal effects and exact bias. |
 | **Notes**                      | —                                                           | Width deviation due to channel modulation, mobility degradation, and other non-idealities. |
+
+# DC Analysis
+https://github.com/lecsinchanamn/Experiment-04/blob/7262382e6cf850db5b6f745db8b03de8090f55aa/Ckt%2001%20DC%20analysis.png
+
+# Input Common-Mode Range (ICMR)  
+Input Common-Mode Range (ICMR)  for which all MOSFETs in a differential amplifier remain in saturation, 
+ensuring linear operation.
+# Points:
+- Ensures linear behavior of the amplifier.
+- If input goes outside this range, transistors may enter triode or turn OFF.
+- Depends on supply voltages, threshold voltage (VT), overdrive voltage (VOV), and transistor configuration.
+# Typical NMOS Differential Pair:
+ICMR_min ≈ VS + VOV
+ICMR_max ≈ VDD − VOV − VDSsat_load
+Where:
+VS = Source voltage of the differential pair
+VOV = Overdrive voltage (VGS − VT)
+VDSsat_load = Minimum VDS for load transistor to stay in saturation
+
