@@ -77,15 +77,15 @@ DIFFERENTIAL AMPLIFIER DESIGN PARAMETERS (Simple Table)
 
 | Parameter                     | Value / Details                     |
 |--------------------------------|-----------------------------------|
-| **Technology**                 | TSMC 180 nm                        |
+| **Power Limit (P)**            | ≤ 1.8 mW                           |
+| **Load Capacitance (CL)**      | 10 pF                              |
+| **MOSFET Channel Length (Ln)** | 480 nm                             |
+| **Threshold Voltage (VT)**     | ≈ 0.36 V                           |
 | **Supply Voltage (VDD)**       | +0.9 V                             |
 | **Negative Supply (VSS)**      | −0.9 V                             |
-| **Power Limit (P)**            | ≤ 1.8 mW                           |
-| **MOSFET Channel Length (Ln)** | 480 nm                             |
+| **Tail Node Voltage (Vp)**     | −0.7 V                             |
 | **Input Common-Mode Voltage**  | Vin,CM = 0 V                        |
 | **Output Common-Mode Voltage** | Vo,CM = 0 V                         |
-| **Tail Node Voltage (Vp)**     | −0.7 V                             |
-| **Load Capacitance (CL)**      | 10 pF                              |
-| **Threshold Voltage (VT)**     | ≈ 0.36 V                           |
+| **Technology**                 | TSMC 180 nm                        |
 
-
+# 
