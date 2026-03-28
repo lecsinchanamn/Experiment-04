@@ -124,12 +124,12 @@ ensuring linear operation.
 - If input goes outside this range, transistors may enter triode or turn OFF.
 - Depends on supply voltages, threshold voltage (VT), overdrive voltage (VOV), and transistor configuration.
 # Typical NMOS Differential Pair:
-ICMR_min ≈ VS + VOV
-ICMR_max ≈ VDD − VOV − VDSsat_load
+- ICMR_min ≈ VS + VOV
+- ICMR_max ≈ VDD − VOV − VDSsat_load
 Where:
-VS = Source voltage of the differential pair
-VOV = Overdrive voltage (VGS − VT)
-VDSsat_load = Minimum VDS for load transistor to stay in saturation
+- VS = Source voltage of the differential pair
+- VOV = Overdrive voltage (VGS − VT)
+- VDSsat_load = Minimum VDS for load transistor to stay in saturation
 
 # DIFFERENTIAL INPUT VOLTAGE RANGE
 
