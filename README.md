@@ -90,3 +90,22 @@ DIFFERENTIAL AMPLIFIER DESIGN PARAMETERS (Simple Table)
 
 # Circuit diogram
 https://github.com/lecsinchanamn/Experiment-04/blob/46c4f172a8a7dadc5ce9e2321c71c1a5fb978056/Ckt%2001%20ckt%20diogram.png
+
+# Calcultion
+| Parameter / Calculation        | Value / Notes                                                                 |
+|--------------------------------|-----------------------------------------------------------------------------|
+| **Total Power (P)**            | P = (VDD − VSS) × ISS = 1.8 × 1 mA = 1.8 mW (satisfies constraint)          |
+| **Tail Current (ISS)**         | ISS = 1 mA (fully uses power budget)                                         |
+| **Drain Currents (ID1, ID2)**  | ID1 = ID2 = ISS / 2 = 0.5 mA                                                |
+| **Load Resistance (RD)**       | RD = (VDD − Vout) / ID = 0.9 / 0.5 mA = 1.8 kΩ                               |
+| **Input Common-Mode Voltage**  | Vin,CM = 0 V                                                                |
+| **Gate Voltages (VG1, VG2)**  | VG1 = VG2 = 0 V                                                             |
+| **Source Voltage (VS)**        | VS = Vp = −0.7 V                                                            |
+| **Gate-Source Voltage (VGS)**  | VGS = VG − VS = 0 − (−0.7) = 0.7 V                                         |
+| **Overdrive Voltage (VOV)**    | VOV = VGS − VT = 0.7 − 0.36 = 0.34 V                                        |
+| **Drain Voltage (VD)**         | VD = Vout = 0 V                                                             |
+| **Drain-Source Voltage (VDS)** | VDS = VD − VS = 0 − (−0.7) = 0.7 V → Saturation (VDS > VOV)                 |
+| **Bias Point Summary**         | VG = 0 V, VS = −0.7 V, VD = 0 V, VGS = 0.7 V, VDS = 0.7 V                    |
+| **Width Calculation (Theoretical)** | W = 17.57 μm (using first-order equations)                                |
+| **Width Calculation (Simulation)**  | W ≈ 28.475 μm (fine-tuned for exact biasing due to non-ideal effects)      |
+| **Notes**                      | Deviation from theory due to non-ideal MOSFET effects (channel length modulation, mobility degradation, etc.) |
