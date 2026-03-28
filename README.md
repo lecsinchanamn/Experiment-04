@@ -367,7 +367,8 @@ https://github.com/lecsinchanamn/Experiment-04/blob/42d2b3b9042f5b7d74661072340a
 # Transient Analysis and cheaking linear or non-linear
 
 1. Linearity
-2. 
+When the differential input voltage is small, both NMOS transistors (M1 and M2) remain in saturation, and the PMOS active load (M3 and M4) also stays in saturation. The tail current from the NMOS current source (M5) splits evenly between the NMOS transistors. The amplifier produces a clean, amplified output that is proportional to the input, with no distortion. Transient analysis in this region shows a sinusoidal output waveform that faithfully follows the input signal.
+
 https://github.com/lecsinchanamn/Experiment-04/blob/bbe78cd60794b10f250b3ea2a2509593b252c096/ckt%2002%20TA%20linear.png
 
 | Parameter                  | Value / Condition          | Observation / Notes                                         |
@@ -379,7 +380,8 @@ https://github.com/lecsinchanamn/Experiment-04/blob/bbe78cd60794b10f250b3ea2a250
 | Amplifier Behavior           | Linear                    | Output proportional to input difference                   |
 
 2. Non-Linearity
-   
+ If the differential input voltage becomes large, one NMOS transistor may enter cutoff while the other carries most of the current. The PMOS load continues to operate, but the output waveform becomes distorted and clipped. The gain decreases, and the amplifier no longer behaves linearly. Transient analysis in this region reveals the limits of the amplifier’s linear operation and highlights the onset of non-linear behavior.
+  
 https://github.com/lecsinchanamn/Experiment-04/blob/8c968d8143ae255ddad0c57165b87911c4ecdcb7/Ckt%2002%20TA%20non-linear.png
 
 | Condition                  | Differential Input (Vid) | Circuit Behavior                         |
@@ -409,3 +411,30 @@ https://github.com/lecsinchanamn/Experiment-04/blob/8c968d8143ae255ddad0c57165b8
 | Output Resistance (Rout)   | —                              | 10 kΩ                          |
 | Amplifier Behavior         | Amplified & Inverted           | Linear (ideal, saturation)     |
 
+# AC Analysis 
+AC analysis of a differential amplifier studies its response to small, time-varying input signals.
+The NMOS current source provides a stable tail current, steering it between the differential pair.
+The PMOS active load converts the differential currents into output voltage with high gain.
+Midband gain is flat and linear, while high frequencies roll off due to parasitic capacitances.
+AC analysis helps predict gain, bandwidth, and frequency response without full transient simulation.
+
+https://github.com/lecsinchanamn/Experiment-04/blob/40eaaa172de73b30c5c506e3bd0d3f3c473f3132/Ckt%2002%20AC%20analysis.png
+
+# calucalion of Midband gain/Cutoff Frequencies/Bandwidth/Bandwidth
+
+| Parameter                   | Value                  |
+|-----------------------------|-----------------------|
+| Midband Gain (Av)           | 5.2 dB                |
+| -3 dB Gain                  | 2.2 dB                |
+| Lower Cutoff Frequency (fL) | 0 Hz                  |
+| Upper Cutoff Frequency (fH) | 2.2 GHz               |
+| Bandwidth (BW)              | 2.2 GHz               |
+| Unity Gain Frequency (f0dB) | 4.8 GHz               |
+| Unity Gain Bandwidth (UGB)  | 8.688 GHz             |
+
+# conclusion
+1. The differential amplifier operates within power and voltage limits, with balanced current splitting between the NMOS pair.  
+2. Practical factors like non-ideal current source, finite output resistance, and device imperfections lower the gain compared to theoretical predictions.  
+3. Frequency response shows a stable midband region with a high-frequency roll-off due to parasitic and load capacitances.  
+4. Small differential inputs produce clean, linear output without distortion, ensuring proper signal amplification.  
+5. Large differential inputs push the amplifier into non-linear operation, causing one branch to dominate and resulting in waveform distortion.  
