@@ -72,6 +72,20 @@ A differential amplifier with resistive load is a circuit that amplifies the dif
 Av = gm × RD
 8. Transconductance:
 gm = (2 × ID) / Vov
+DIFFERENTIAL AMPLIFIER DESIGN PARAMETERS (Simple Table)
+# Circuit parameter given:
 
+| Parameter                     | Value / Details                     |
+|--------------------------------|-----------------------------------|
+| **Technology**                 | TSMC 180 nm                        |
+| **Supply Voltage (VDD)**       | +0.9 V                             |
+| **Negative Supply (VSS)**      | −0.9 V                             |
+| **Power Limit (P)**            | ≤ 1.8 mW                           |
+| **MOSFET Channel Length (Ln)** | 480 nm                             |
+| **Input Common-Mode Voltage**  | Vin,CM = 0 V                        |
+| **Output Common-Mode Voltage** | Vo,CM = 0 V                         |
+| **Tail Node Voltage (Vp)**     | −0.7 V                             |
+| **Load Capacitance (CL)**      | 10 pF                              |
+| **Threshold Voltage (VT)**     | ≈ 0.36 V                           |
 
 
