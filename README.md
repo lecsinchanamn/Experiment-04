@@ -16,6 +16,22 @@ Output ∝ (V1 - V2)
 - If V1 = V2 → Output = 0 (ideal case)
 - If V1 ≠ V2 → Output = Amplified difference
 - Rejects common noise present in both inputs
+1. Current Flow:
+- Current splits between M1 and M2
+- Vin1 > Vin2 → M1 gets more current
+- Vin2 > Vin1 → M2 gets more current
+2. Small Input:
+- Both transistors ON
+- Works in linear region (good amplification)
+3. Gain:
+Av = gm × Rout
+4. Transconductance:
+gm = (2 × ID) / Vov
+5. Large Input:
+- If input difference is large (vid > 2Vov):
+  → One transistor OFF
+  → Other carries all current
+  → Output becomes non-linear
 # Key Features:
 - High Common Mode Rejection (CMRR)
 - Accurate signal amplification
@@ -25,5 +41,3 @@ Output ∝ (V1 - V2)
 - Audio systems
 - Sensor circuits
 - Communication systems
-
-
