@@ -88,4 +88,5 @@ DIFFERENTIAL AMPLIFIER DESIGN PARAMETERS (Simple Table)
 | **Output Common-Mode Voltage** | Vo,CM = 0 V                         |
 | **Technology**                 | TSMC 180 nm                        |
 
-# 
+# Circuit diogram
+Ckt 01 ckt diogram.png
