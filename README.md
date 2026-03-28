@@ -281,4 +281,20 @@ The differential amplifier with resistive load was successfully designed and wor
 The design meets specifications and provides proper amplification and frequency response.
 
 # CIRCUIT 02
-# Design ans analysis the differential amplifer with the resistive load
+# Design and analysis the differential amplifer with PMOS active load and an NMOS current source
+
+- The circuit has two matched NMOS transistors (M1, M2) as a differential pair, with their sources connected to a current source NMOS (M5) and drains connected to a PMOS current mirror load (M3, M4).  
+- A differential input, vid = vin1 − vin2, steers the tail current ISS between M1 and M2:  
+  - If vin1 > vin2 → M1 conducts more, M2 less.  
+  - If vin2 > vin1 → M2 conducts more, M1 less.  
+- M3 is diode-connected and sets the reference current; M4 mirrors it to the other branch, providing a high-resistance active load.  
+- Changes in M1/M2 currents create voltage differences at OUT1 and OUT2 → differential output.  
+- M5 provides a nearly constant tail current, but its finite resistance slightly reduces gain.  
+- Small inputs → all transistors in saturation → linear amplification.  
+- Large inputs → one transistor may turn OFF → non-linear behavior.  
+- Using a PMOS active load increases gain compared to a resistive-load amplifier.  
+# circuit diogram
+
+
+
+
