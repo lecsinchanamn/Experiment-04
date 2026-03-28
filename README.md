@@ -368,6 +368,8 @@ https://github.com/lecsinchanamn/Experiment-04/blob/42d2b3b9042f5b7d74661072340a
 
 1. Linearity
    
+https://github.com/yashwanthds2007-source/LIC_BEC456B/blob/8ccbab46b5092053933c689180892a1cc7949061/EXP_4_DIFFERENTIAL%20AMPLIFIER/Results/exp4b_transient1.png
+
 | Parameter                  | Value / Condition          | Observation / Notes                                         |
 |-----------------------------|---------------------------|-------------------------------------------------------------|
 | Differential Input (Vid)    | 100 mV < 0.34 V           | Within linear range                                        |
@@ -377,8 +379,12 @@ https://github.com/lecsinchanamn/Experiment-04/blob/42d2b3b9042f5b7d74661072340a
 | Amplifier Behavior           | Linear                    | Output proportional to input difference                   |
 
 2. Non-Linearity
-   
+3. 
+https://github.com/yashwanthds2007-source/LIC_BEC456B/blob/8ccbab46b5092053933c689180892a1cc7949061/EXP_4_DIFFERENTIAL%20AMPLIFIER/Results/exp4b_transient2.png
+
 | Condition                  | Differential Input (Vid) | Circuit Behavior                         |
 |-----------------------------|-------------------------|-----------------------------------------|
 | Within Linear Range         | 100 mV < 0.34 V         | Output sinusoidal, M1 & M2 in saturation, linear amplification |
 | Beyond Linear Range         | 600 mV > 0.34 V         | Output distorted/clipped, one NMOS off, current steered, non-linear amplification |
+
+
