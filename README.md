@@ -8,7 +8,8 @@
 - VP =-0.7V
 # What is differential amplifer?
 A differential amplifier is an electronic circuit that amplifies the difference between two input signals while rejecting any signals that are common to both inputs (called common-mode signals).
-Formula:
+A basic MOS differential amplifier consists of two matched MOSFETs (M1 and M2) whose sources are connected together and biased using a constant current source. The drains are connected to load elements such as resistors or active loads.
+- Formula:
 Output ∝ (V1 - V2)
  # Working:
 - Takes two inputs: V1 and V2
