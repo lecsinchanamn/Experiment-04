@@ -526,6 +526,7 @@ https://github.com/lecsinchanamn/Experiment-04/blob/b1df0baffe213c9c818677890352
 
 # Transient Analysis
 Transient analysis is used to study how the amplifier responds to time-varying signals (AC inputs) as opposed to just DC conditions. While DC analysis ensures all MOSFETs are biased correctly and in saturation, transient analysis shows the dynamic response of the amplifier when actual input signals are applied.
+
 # Neds of Transient Analysis
 - To verify the linear amplification range of the differential amplifier.
 - To observe output waveforms and detect any distortion or clipping.
@@ -533,7 +534,7 @@ Transient analysis is used to study how the amplifier responds to time-varying s
 - To check the tail current sharing between the NMOS input pair (M1 & M2).
 - To evaluate timing-related behavior like rise time, fall time, and delay in the output.
 
-  1. Linear region
+1. Linear region
 
 | Parameter        | Value      |
 |------------------|------------|
