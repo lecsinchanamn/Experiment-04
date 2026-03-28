@@ -549,6 +549,7 @@ Transient analysis is used to study how the amplifier responds to time-varying s
 | VT               | 0.36 V     |
 
 2. NON linear region
+
 | Parameter          | Value / Observation                                      |
 |-------------------|----------------------------------------------------------|
 | Differential Input | Vid = 600 mV > 0.48 V                                    |
@@ -622,7 +623,7 @@ https://github.com/lecsinchanamn/Experiment-04/blob/464ff2620e1dc8a02c20465a4ce2
    - Linear for small differential inputs  
    - Large inputs cause distortion and non-linear behavior
   
-#  Conclusionr
+#  Conclusion
 1. All three differential amplifier configurations operate correctly with transistors in saturation.  
 2. Circuit 3 (PMOS active load) achieves the highest gain, while Circuit 2 (NMOS current source) has the lowest due to degeneration.  
 3. Frequency response is influenced by load and parasitic capacitances, with Circuit 3 showing the best gain-bandwidth trade-off.  
