@@ -532,3 +532,20 @@ Transient analysis is used to study how the amplifier responds to time-varying s
 - To confirm that all transistors remain in saturation during signal swings.
 - To check the tail current sharing between the NMOS input pair (M1 & M2).
 - To evaluate timing-related behavior like rise time, fall time, and delay in the output.
+  
+https://github.com/lecsinchanamn/Experiment-04/blob/dc04c95ee7d1f9cbcd6e4d376b2428bb9c07190d/ckt%2003%20TA.PNG
+
+# Simulation and wavefrom and output volage observastion
+
+| Parameter            | Value / Signal           | Observation                              |
+|---------------------|--------------------------|------------------------------------------|
+| Analysis Type       | .tran 5 ms               | Transient simulation                     |
+| Input Signal (Vin1) | SINE(0, 10 mV, 1 kHz)   | Sinusoidal, +10 mV peak                  |
+| Input Signal (Vin2) | SINE(0, -10 mV, 1 kHz)  | Sinusoidal, -10 mV peak                  |
+| Differential Input  | 20 mV (peak-to-peak)    | Small signal input                       |
+| Input Waveform      | ±10 mV, 1 kHz           | Centered around 0 V                      |
+| Output (Vout1)      | ≈ 0.8876 V              | DC operating point                       |
+| Output Waveform     | Sinusoidal              | Follows input shape                      |
+| Output Variation    | Small signal            | Slight variation around DC level         |
+| Gain Observation    | Low amplitude output    | Due to biasing conditions                |
+
