@@ -209,3 +209,26 @@ NON-LINEAR REGION OF DIFFERENTIAL AMPLIFIER
 | Output Observation        | Distorted waveform, clipping observed       | Amplifier no longer behaves linearly               |
 | Transistor Operation      | One transistor enters cutoff                 | Only one transistor carries the current             |
 | Amplifier Behavior        | Non-linear amplification                     | Output not proportional to input difference         |
+
+#  SIMULATION VS THEORETICAL values of the  DIFFERENTIAL AMPLIFIER GAIN:
+
+| Practical / Simulation (Left)          | Theoretical (Right)                                               |
+|---------------------------------------|------------------------------------------------------------------|
+| **Input Signal**                        | **Channel Length Modulation**                                     |
+| Type: Sine, f = 1 kHz,                  | λ = 0.1 V⁻¹                                                      |
+| Amplitude: 50 mV differential, DC 0 V |                                                                  |
+| **Input (p-p)**                          | **Output Resistance (ro)**                                        |
+| Vin(p-p) = 100 mV                       | ro = 1 / (λ × ID) = 1 / (0.1 × 0.5 mA) = 20 kΩ                   |
+| **Output (p-p)**                         | **Effective Output Resistance**                                    |
+| Vout(p-p) = 604 mV                       | ro,eff = ro1 ∥ ro2 = 20 kΩ ∥ 20 kΩ = 10 kΩ                        |
+| **Voltage Gain (Av)**                     | **Transconductance (gm)**                                         |
+| Av = Vout / Vin = 604 mV / 100 mV ≈ 6.04| gm = 2 × ID / VOV = 2 × 0.5 mA / 0.34 V ≈ 2.94 mS                |
+| **Gain in dB**                            | **Load Resistance (Rout)**                                        |
+| Av(dB) = 20 log10(6.04) ≈ 15.62 dB      | Rout = RD ∥ ro,eff = 1.8 kΩ ∥ 10 kΩ ≈ 1.53 kΩ                     |
+|                                       | **Differential Gain (Ad)**                                        |
+|                                       | Ad = gm × Rout = 2.94 mS × 1.53 kΩ ≈ 4.5                          |
+|                                       | **Gain in dB**                                                    |
+|                                       | Ad(dB) = 20 log10(4.5) ≈ 13.06 dB                                 |
+| **Observation**                         | **Observation**                                                   |
+| Output shows practical effects,          | Theoretical gain lower due to ideal assumptions (no parasitics,  |
+| parasitic capacitance, etc.             | perfect current matching).                                        |
