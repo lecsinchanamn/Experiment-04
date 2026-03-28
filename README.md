@@ -397,4 +397,15 @@ https://github.com/lecsinchanamn/Experiment-04/blob/8c968d8143ae255ddad0c57165b8
 - PMOS load still works but cannot maintain linear amplification.
 - Harmonics are introduced because the amplifier is no longer linear.
 
+ # Differnce btween theory and simulation Gain (Av)
+ 
+| Parameter                  | Simulation                     | Theory                        |
+|----------------------------|--------------------------------|-------------------------------|
+| Input Signal               | 50 mVpp Sine, 1 kHz, 0 V DC   | —                             |
+| Output Signal              | 181 mVpp                       | —                             |
+| Voltage Gain (Av)          | 1.81 V/V                       | 41.7 V/V                      |
+| Gain in dB (Av_dB)         | 5.15 dB                        | 32.4 dB                       |
+| Transconductance (gm)      | —                              | 4.17 mS                        |
+| Output Resistance (Rout)   | —                              | 10 kΩ                          |
+| Amplifier Behavior         | Amplified & Inverted           | Linear (ideal, saturation)     |
 
