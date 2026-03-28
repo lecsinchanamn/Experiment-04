@@ -281,3 +281,4 @@ The differential amplifier with resistive load was successfully designed and wor
 The design meets specifications and provides proper amplification and frequency response.
 
 # CIRCUIT 02
+# Design ans analysis the differential amplifer with the resistive load
