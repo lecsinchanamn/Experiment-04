@@ -251,6 +251,8 @@ AC analysis is used to study how the differential amplifier responds to small al
 - Cutoff Frequencies (fL and fH): The frequencies where the gain drops by 3 dB from its maximum value.
 - Frequency Response: Shows how the amplifier amplifies signals at low, mid, and high frequencies.
 - 
+https://github.com/lecsinchanamn/Experiment-04/blob/378f5600733350dafb8527d1769f2941a2587dbc/README.md
+
 | Parameter                    | Value / Notes                          |
 |-------------------------------|---------------------------------------|
 | **Midband Gain (Av)**         | 9.871 dB                               |
