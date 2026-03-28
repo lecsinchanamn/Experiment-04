@@ -197,6 +197,8 @@ LINEARITY VERIFICATION OF DIFFERENTIAL AMPLIFIER
 
 # Non Linear region
 
+https://github.com/lecsinchanamn/Experiment-04/blob/3e6659a57346894be7a314dd1cffdb37c726e0bc/ckt%2001%20TA%20non-liner.png
+
 NON-LINEAR REGION OF DIFFERENTIAL AMPLIFIER
 
 | Parameter / Case          | Value / Observation                        | Explanation / Justification                          |
