@@ -12,22 +12,22 @@ A basic MOS differential amplifier consists of two matched MOSFETs (M1 and M2) w
 - Formula:
 Output ∝ (V1 - V2)
  # Working:
-- Takes two inputs: V1 and V2
+1. Takes two inputs: V1 and V2
 - If V1 = V2 → Output = 0 (ideal case)
 - If V1 ≠ V2 → Output = Amplified difference
 - Rejects common noise present in both inputs
-1. Current Flow:
+2. Current Flow:
 - Current splits between M1 and M2
 - Vin1 > Vin2 → M1 gets more current
 - Vin2 > Vin1 → M2 gets more current
-2. Small Input:
+3. Small Input:
 - Both transistors ON
 - Works in linear region (good amplification)
-3. Gain:
+4. Gain:
 Av = gm × Rout
-4. Transconductance:
+5. Transconductance:
 gm = (2 × ID) / Vov
-5. Large Input:
+6. Large Input:
 - If input difference is large (vid > 2Vov):
   → One transistor OFF
   → Other carries all current
@@ -41,3 +41,37 @@ gm = (2 × ID) / Vov
 - Audio systems
 - Sensor circuits
 - Communication systems
+# CIRCUIT 01
+#  Design ans analysis the differential amplifer with the resistive load
+# Definition:
+A differential amplifier with resistive load is a circuit that amplifies the difference between two input voltages using two transistors and resistors (RD) as loads.
+1. Circuit:
+- Two matched transistors (M1, M2)
+- One constant current source (ISS)
+- Two resistors (RD) at the drains
+2. Input:
+- vid = Vin1 − Vin2
+3. Working:
+- Total current (ISS) is divided between M1 and M2
+- Vin1 > Vin2 → M1 current increases, M2 decreases
+- Vin2 > Vin1 → M2 current increases, M1 decreases
+4. Output:
+- Current through RD creates voltage drop
+- Output is taken at drains
+- Produces differential output voltage
+
+5. Small Input:
+- Both transistors ON (saturation)
+- Linear operation
+- Output proportional to input
+6. Large Input:
+- One transistor OFF
+- Other carries full current
+- Non-linear behavior
+7. Gain:
+Av = gm × RD
+8. Transconductance:
+gm = (2 × ID) / Vov
+
+
+
