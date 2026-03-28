@@ -131,7 +131,20 @@ VS = Source voltage of the differential pair
 VOV = Overdrive voltage (VGS − VT)
 VDSsat_load = Minimum VDS for load transistor to stay in saturation
 
+# DIFFERENTIAL INPUT VOLTAGE RANGE
+
+| Parameter                     | Value / Formula                  | Explanation / Justification                                      |
+|--------------------------------|---------------------------------|------------------------------------------------------------------|
+| Condition for Linear Operation | |Vid| ≤ 2 × VOV                  | Linear behavior when both transistors stay in saturation         |
+| Overdrive Voltage (VOV)        | 0.34 V                           | From bias and transistor calculation                              |
+| Maximum Differential Input (Vid max) | 2 × 0.34 = 0.68 V             | Upper limit for linear operation                                   |
+| Minimum Differential Input (Vid min) | −0.68 V                        | Lower limit for linear operation                                   |
+| Final Linear Input Range       | −0.68 V ≤ Vid ≤ 0.68 V          | Safe differential input range for linear amplification           |
+
+# Input Common-Mode Range (ICMR)  
+
 # Maximum Input Common Mode Voltage
+
 | Parameter                        | Value / Formula                       | Justification / Explanation                                        |
 |----------------------------------|--------------------------------------|--------------------------------------------------------------------|
 | **Drain-Source Condition**        | VDS ≥ VOV                             | Ensures NMOS transistors remain in saturation.                     |
