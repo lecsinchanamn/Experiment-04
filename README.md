@@ -261,3 +261,23 @@ https://github.com/lecsinchanamn/Experiment-04/blob/378f5600733350dafb8527d1769f
 | **Upper Cutoff Frequency (fH)** | 4.819 MHz                             |
 | **Bandwidth (BW)**            | fH − fL = 4.819 − 0 = 4.819 MHz       |
 | **Unity Gain Bandwidth (UGB)** | Av × BW = 6.04 × 4.819 MHz ≈ 29.106 MHz |
+
+# Result
+
+| Parameter              | Theoretical Value     | Simulated Value      |
+|------------------------|---------------------|--------------------|
+| Voltage Gain (Av)      | 4.5 V/V             | 6.04 V/V           |
+| Gain in dB             | 14.46 dB            | 15.62 dB           |
+
+# Conclusion:
+The differential amplifier with resistive load was successfully designed and works as expected.  
+- Power ≤ 1.8 mW, VDD = 0.9 V, VSS = -0.9 V, Vocm = 0 V.  
+- Tail current ISS = 1 mA, split equally: ID1 = ID2 = 0.5 mA.  
+- Both NMOS transistors stay in saturation with VS ≈ -0.7 V.  
+- Gain: Theoretical ≈ 4.5–5.3 V/V, Simulated ≈ 6.04 V/V.  
+- Bandwidth ≈ 4.819 MHz, Unity Gain Bandwidth ≈ 15 MHz.  
+- Differences between theory and simulation are due to real MOSFET effects.  
+- Amplifier is linear for small input voltages; distortion occurs for larger inputs.  
+The design meets specifications and provides proper amplification and frequency response.
+
+# CIRCUIT 02
