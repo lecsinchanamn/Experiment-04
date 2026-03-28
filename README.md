@@ -500,4 +500,35 @@ The CMOS differential amplifier is designed using a pair f NMOS transistors (M1 
 | M5         | NMOS | 0.366 | -0.35 | -0.7  | 0.716     | 0.35      | |VDS| ≥ VGS − Vt   | Edge of Saturation|
 
 # DC Analysis 
+DC analysis refers to studying the steady-state behavior of a circuit when no AC input signal is applied. It focuses on voltages and currents at all nodes to ensure proper biasing of transistors. For a CMOS differential amplifier with NMOS input pair, PMOS active load, and NMOS current source,
 
+https://github.com/lecsinchanamn/Experiment-04/blob/b1df0baffe213c9c818677890352e68fc19abcde/ckt%2003%20DC%20analysis.PNG
+
+| Parameter / Node            | Transistor / Node | Value (V / mA)         | Notes / Observations                              |
+|-----------------------------|-----------------|-----------------------|--------------------------------------------------|
+| Supply Voltage              | VDD             | 0.9 V                 | Positive rail                                    |
+| Negative Supply             | VSS             | -0.9 V                | Negative rail                                    |
+| Ground Reference            | GND             | 0 V                   | Reference node                                   |
+| Tail Node Voltage           | Vp              | -0.7218 V             | NMOS tail node                                   |
+| Bias Node Voltage           | Vg5             | -0.37 V               | Gate voltage of NMOS current source M5          |
+| Tail Current                | M5              | 1.0487 mA             | Total tail current                               |
+| Differential Pair Current   | M1              | 0.5243 mA             | Half of tail current                              |
+| Differential Pair Current   | M2              | 0.5243 mA             | Half of tail current                              |
+| PMOS Load Current           | M3              | -0.5243 mA            | Opposite to NMOS current                          |
+| PMOS Load Current           | M4              | -0.5243 mA            | Opposite to NMOS current                          |
+| Output Voltage              | Vout1           | 0.8876 V              | Equal outputs indicate zero differential input   |
+| Output Voltage              | Vout2           | 0.8876 V              | Same as Vout1                                    |
+| VGS / VSG (M1, M2)         | -               | 0.7218 V              | Gate-source voltage for NMOS transistors         |
+| VDS / VSD (M1, M2)         | -               | 1.6094 V              | Drain-source voltage for NMOS transistors        |
+| VGS (M5)                    | -               | 0.53 V                | Gate-source voltage of NMOS current source       |
+| VDS (M5)                    | -               | 0.1782 V              | Drain-source voltage of NMOS current source      |
+| Current Consistency Check   | -               | 1.0487 ≈ 0.5243+0.5243 mA | Tail current equals sum of differential pair currents |
+
+# Transient Analysis
+Transient analysis is used to study how the amplifier responds to time-varying signals (AC inputs) as opposed to just DC conditions. While DC analysis ensures all MOSFETs are biased correctly and in saturation, transient analysis shows the dynamic response of the amplifier when actual input signals are applied.
+# Neds of Transient Analysis
+- To verify the linear amplification range of the differential amplifier.
+- To observe output waveforms and detect any distortion or clipping.
+- To confirm that all transistors remain in saturation during signal swings.
+- To check the tail current sharing between the NMOS input pair (M1 & M2).
+- To evaluate timing-related behavior like rise time, fall time, and delay in the output.
