@@ -367,8 +367,8 @@ https://github.com/lecsinchanamn/Experiment-04/blob/42d2b3b9042f5b7d74661072340a
 # Transient Analysis and cheaking linear or non-linear
 
 1. Linearity
-   
-https://github.com/yashwanthds2007-source/LIC_BEC456B/blob/8ccbab46b5092053933c689180892a1cc7949061/EXP_4_DIFFERENTIAL%20AMPLIFIER/Results/exp4b_transient1.png
+2. 
+https://github.com/lecsinchanamn/Experiment-04/blob/bbe78cd60794b10f250b3ea2a2509593b252c096/ckt%2002%20TA%20linear.png
 
 | Parameter                  | Value / Condition          | Observation / Notes                                         |
 |-----------------------------|---------------------------|-------------------------------------------------------------|
@@ -379,8 +379,7 @@ https://github.com/yashwanthds2007-source/LIC_BEC456B/blob/8ccbab46b5092053933c6
 | Amplifier Behavior           | Linear                    | Output proportional to input difference                   |
 
 2. Non-Linearity
-3. 
-https://github.com/yashwanthds2007-source/LIC_BEC456B/blob/8ccbab46b5092053933c689180892a1cc7949061/EXP_4_DIFFERENTIAL%20AMPLIFIER/Results/exp4b_transient2.png
+
 
 | Condition                  | Differential Input (Vid) | Circuit Behavior                         |
 |-----------------------------|-------------------------|-----------------------------------------|
