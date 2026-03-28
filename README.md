@@ -379,11 +379,22 @@ https://github.com/lecsinchanamn/Experiment-04/blob/bbe78cd60794b10f250b3ea2a250
 | Amplifier Behavior           | Linear                    | Output proportional to input difference                   |
 
 2. Non-Linearity
-
+   
+https://github.com/lecsinchanamn/Experiment-04/blob/8c968d8143ae255ddad0c57165b87911c4ecdcb7/Ckt%2002%20TA%20non-linear.png
 
 | Condition                  | Differential Input (Vid) | Circuit Behavior                         |
 |-----------------------------|-------------------------|-----------------------------------------|
 | Within Linear Range         | 100 mV < 0.34 V         | Output sinusoidal, M1 & M2 in saturation, linear amplification |
 | Beyond Linear Range         | 600 mV > 0.34 V         | Output distorted/clipped, one NMOS off, current steered, non-linear amplification |
+
+# Justification
+
+- Differential pair becomes unbalanced as one transistor turns off.
+- Overall voltage gain drops due to loss of current in one branch.
+- Output waveform gets clipped at high input differences.
+- Tail current flows mostly through a single NMOS transistor.
+- Distortion appears in the output signal, changing its shape.
+- PMOS load still works but cannot maintain linear amplification.
+- Harmonics are introduced because the amplifier is no longer linear.
 
 
