@@ -339,3 +339,20 @@ https://github.com/lecsinchanamn/Experiment-04/blob/367df556852a9f3583d20d1573f7
   - VSD > VOV → Saturation OK
   - Mirrors current and gives high output resistance
 
+# DC Analysis 
+
+# Input Common-Mode Range (ICMR)
+
+| Parameter                        | Value          | Notes / Condition                                      |
+|----------------------------------|----------------|--------------------------------------------------------|
+| Minimum Input Common-Mode Voltage | -0.34 V        | NMOS transistors M1, M2 ON; tail current source M5 in saturation |
+| Maximum Input Common-Mode Voltage | 0.39 V         | PMOS load transistors M3, M4 remain in saturation     |
+| Input Common-Mode Range (ICMR)    | -0.34 V to 0.39 V | Range where all transistors operate in saturation    |
+
+# Output Common-Mode Range (OCMR)
+
+| Parameter                         | Value       | Notes / Condition                                      |
+|----------------------------------|------------|--------------------------------------------------------|
+| Minimum Output Common-Mode Voltage | -0.36 V    | NMOS transistors M1, M2 remain in saturation         |
+| Maximum Output Common-Mode Voltage | 0.65 V     | PMOS load transistors M3, M4 remain in saturation    |
+| Output Common-Mode Range (OCMR)    | -0.36 V to 0.65 V | Range where all transistors operate in saturation |
