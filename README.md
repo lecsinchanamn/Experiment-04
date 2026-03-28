@@ -242,3 +242,20 @@ https://github.com/lecsinchanamn/Experiment-04/blob/579019e810619c3748a6b5e3a4e9
 3. Mobility Drop: Electron movement slows at high fields, reducing amplifier gain.
 4. Overdrive Shift: Small changes in V_OV change currents and affect gain.
 5. Parasitics & Measurement: Internal capacitances and measurement errors slightly alter gain.
+
+# DC Analysis
+
+AC analysis is used to study how the differential amplifier responds to small alternating signals (like sine waves) at different frequencies. It helps us find:
+- Gain (Av): How much the amplifier increases the input signal.
+- Bandwidth (BW): The range of frequencies over which the amplifier works effectively.
+- Cutoff Frequencies (fL and fH): The frequencies where the gain drops by 3 dB from its maximum value.
+- Frequency Response: Shows how the amplifier amplifies signals at low, mid, and high frequencies.
+- 
+| Parameter                    | Value / Notes                          |
+|-------------------------------|---------------------------------------|
+| **Midband Gain (Av)**         | 9.871 dB                               |
+| **−3 dB Gain**                | 6.871 dB                               |
+| **Lower Cutoff Frequency (fL)** | 0 Hz                                   |
+| **Upper Cutoff Frequency (fH)** | 4.819 MHz                             |
+| **Bandwidth (BW)**            | fH − fL = 4.819 − 0 = 4.819 MHz       |
+| **Unity Gain Bandwidth (UGB)** | Av × BW = 6.04 × 4.819 MHz ≈ 29.106 MHz |
